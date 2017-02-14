@@ -9,9 +9,11 @@ clearbtn.addEventListener("click", function(e){
 });
 
 canvas.addEventListener("click", function(e){
-    var ctx = canvas.getContent('2d');
-    var xcor = event.clientX;
-    var ycor = event.clientY;
-    ctx.fillRect(xcor, ycor, 200, 200);
+    var ctx = canvas.getContext('2d');
+    var stroke = 10;
+    var rect = canvas.getBoundingClientRect();
+    var xcor = event.clientX - rect.left - 0.5*stroke;
+    var ycor = event.clientY - rect.top - 0.5*stroke;
+    ctx.fillRect(xcor, ycor, stroke, stroke);
 });
 
