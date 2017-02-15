@@ -22,8 +22,8 @@ ctx.beginPath();
 canvas.addEventListener("click", function(e){
     var stroke = 10;
     var rect = canvas.getBoundingClientRect();
-    var xcor = event.clientX - rect.left - 0.5*stroke;
-    var ycor = event.clientY - rect.top - 0.5*stroke;
+    var xcor = event.clientX - rect.left;
+    var ycor = event.clientY - rect.top;
     ctx.arc(xcor, ycor, stroke*0.5, 0, 2*Math.PI);
     ctx.stroke();
     ctx.fill();
