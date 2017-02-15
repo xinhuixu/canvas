@@ -25,5 +25,8 @@ canvas.addEventListener("click", function(e){
     var ycor = event.clientY - rect.top - 0.5*stroke;
     ctx.arc(xcor, ycor, stroke*0.5, 0, 2*Math.PI);
     ctx.stroke();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(xcor, ycor);
 });
 
